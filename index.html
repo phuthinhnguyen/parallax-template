@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{
+            font-family: "Lato";
+            font-weight: lighter;
+        }
+        nav{
+            position: absolute;
+            top: 0;
+            left: 0;
+           height: 100px;
+           width: 100%;
+           z-index: 2;
+           opacity: 0.6;
+        }
+        nav a{
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            background-color: transparent;
+            margin-left: 10px;
+        }
+        nav a:hover{
+            color: black;
+            background-color: lightgray;
+            opacity: 1;
+        }
+        nav i{
+            margin-right: 5px;
+        }
+        #search{
+            float: right;
+        }
+        .img{
+            background-image: url("parallax1.jpg");
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+        
+        }
+        .logo{
+            padding: 40px;
+            background-color: transparent;
+            text-align: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.6;
+        }
+        .logo h1{
+            color: white;
+            background-color: black;
+            padding: 10px;
+            font-weight: lighter;
+            letter-spacing: 5px;
+            font-size: 22px;
+            
+        }
+        .about{
+            padding: 40px 20px;
+            text-align:center ;
+            color: gray;
+
+        }
+        .about h1{
+            font-weight: lighter;
+            font-size: 25px;
+        }
+        .about h4{
+            font-weight: lighter;
+            font-size: 16px;
+            font-style: italic;
+        }
+        .about p{
+            font-weight: lighter;
+            font-size: 15px;
+            text-align: left;
+            line-height: 25px;
+        }
+        .about-item{
+            display: flex;
+            column-gap: 15px;
+        }
+        .about-item1{
+            flex: 1;
+            
+        }
+        .about-item2{
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+      <nav>
+        <a href="">HOME</a>
+        <a href=""><i class="fa fa-address-book" aria-hidden="true"></i>ABOUT</a>
+        <a href=""><i class="fa fa-th" aria-hidden="true"></i>PORTFOLIO</a>
+        <a href=""><i class="fa fa-envelope" aria-hidden="true"></i>CONTACT</a>
+        <a href="" id="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+      </nav> 
+      <div class="img">
+        <div class="logo">
+            <h1>MY WEBSITE LOGO</h1>
+        </div>
+      </div>
+      <div class="about">
+        <h1>ABOUT ME</h1>
+        <h4>I love photography</h4>
+        <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="about-item">
+            <div class="about-item1">
+                <h3>My Name</h3>
+                <img src="avatar_hat.jpg" alt="">
+            </div>
+            <div class="about-item2">
+                <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+      </div>
+</body>
+</html>
