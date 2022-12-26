@@ -48,13 +48,15 @@
             background-size: cover;
             background-attachment: fixed;
             position: relative;
+            padding: 10px;
+            opacity: 0.8;
         
         }
         .logo{
             padding: 40px;
             background-color: transparent;
             text-align: center;
-            height: 600px;
+            height: 800px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -73,7 +75,8 @@
             padding: 40px 20px;
             text-align:center ;
             color: gray;
-
+            max-width: 1000px;
+            margin: auto;
         }
         .about h1{
             font-weight: lighter;
@@ -92,43 +95,422 @@
         }
         .about-item{
             display: flex;
-            column-gap: 15px;
+            column-gap: 20px;
         }
         .about-item1{
             flex: 1;
-            
+            padding: 20px;
+        }
+        .about-item1 i{
+            margin-right: 5px;
         }
         .about-item2{
             flex: 1;
+            padding: 20px;
         }
+        .about-item2 p{
+            line-height: 30px;
+        }
+        .skill h1{
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 20px;
+         }
+        .skill i{
+            margin-right: 5px;
+         }
+        .skill p{
+            color: gray;
+            letter-spacing: 10px;
+            font-size: 15px;
+        }
+        .about button{
+            border: none;
+            height: 30px;
+            color: white;
+        }
+        .photography-left{
+            height: 20px;
+            background-color: rgb(80, 79, 79);
+            width: 90%;
+            float: left;
+        }
+        .photography-right{
+            height: 20px;
+            background-color: lightgray;
+            float: left;
+            width: 10%;
+        }
+        .design-left{
+            height: 20px;
+            background-color: rgb(80, 79, 79);
+            width: 85%;
+            float: left;
+        }
+        .design-right{
+            height: 20px;
+            background-color: lightgray;
+            float: left;
+            width: 15%;
+        }
+        .photoshop-left{
+            height: 20px;
+            background-color: rgb(80, 79, 79);
+            width: 75%;
+            float: left;
+        }
+        .photoshop-right{
+            height: 20px;
+            background-color: lightgray;
+            float: left;
+            width: 25%;
+        }
+        .skill div::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .index{
+            display: grid;
+            background-color: rgb(80, 79, 79);
+            color: white;
+            grid-template-columns: auto auto auto auto;
+            margin-top: 30px;
+            font-weight: lighter;
+            padding: 20px 0;
+        }
+        .index-item{
+            text-align: center;
+        }
+        .img1{
+            background-image: url("parallax2.jpg");
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            opacity: 0.8;
+        }
+        .logo1{
+            padding: 40px;
+            background-color: transparent;
+            text-align: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .logo1 h1{
+            color: white;
+            padding: 10px;
+            font-weight: lighter;
+            letter-spacing: 10px;
+            font-size: 40px;      
+        }
+        .work{
+            margin: auto;
+            max-width: 1000px;
+            padding: 20px;
+            text-align: center;
+        }
+        .work h2{
+            font-size: 25px;
+            color: gray;
+            font-weight: lighter;
+            margin-top: 40px;
+        }
+        .work p{
+            font-size: 15px;
+            color: gray;
+            font-weight: lighter;
+            font-style: italic;
+           
+        }
+        .work-item{
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+        }
+        .work-item img:hover{
+            opacity: 0.6;
+            cursor: pointer;
+        }
+        .work img{
+            width: 100%;
+            height: auto;
+        }
+    
+        .work a{
+            text-decoration: none;
+            color: black;
+            background-color: rgb(241, 240, 240);
+            padding: 15px;
+            display: inline-block;
+            margin: 50px 0;
+        }
+        .work a:hover{
+            background-color: lightgray;
+        }
+        .img2{
+            background-image: url("parallax3.jpg");
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            opacity: 0.8;
+        }
+        .logo2{
+            padding: 40px;
+            background-color: transparent;
+            text-align: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+      
+        }
+        .logo2 h1{
+            color: white;
+            padding: 10px;
+            font-weight: lighter;
+            letter-spacing: 10px;
+            font-size: 40px;      
+        }
+        .contact{
+            margin: auto;
+            max-width: 1000px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .contact h1{
+            font-size: 25px;
+            color: gray;
+            font-weight: lighter;
+            margin-top: 40px;
+        }
+        .contact p{
+            font-size: 15px;
+            color: gray;
+            font-weight: lighter;
+            font-style: italic;
+        }
+        .contact-item{
+            display: flex;
+            text-align: left;
+            column-gap: 40px;
+        }
+        .contact-item-left{
+            flex:1;
+        }
+        .contact-item-right{
+            flex:2;
+        }
+        .contact img{
+            width: 100%;
+            height: auto;
+        }
+        .contact i{
+            font-size: 25px;
+            margin-right: 20px;
+            color: gray;
+            display: inline-block;
+            width: 25px;
+        }
+        input{
+            height: 40px;
+            float: left;
+            border: 1px solid lightgray;
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        .name{
+            width: 49%;
+        }
+        .e-mail{
+            width: 49%;
+            float: right;
+        }
+        .message{
+            width: 100%;
+        }
+        .contact-item-right a{
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 10px;
+            display: inline-block;
+            float: right;
+            margin-bottom: 50px;
+        }
+        #plane{
+            color: white;
+            margin-right: 0;
+            font-size: 15px;
+        }
+        footer{
+            padding: 60px;
+            background-color: black;
+            text-align: center;
+        }
+        #totop{
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            display: inline-block;
+            background-color: white;
+            margin-bottom: 30px;
+        }
+        #totop i{
+            color: black;
+            margin-right: 10px;
+        }
+        .link a{
+            color: white;
+            font-size: 20px;
+            margin-right:5px ;
+        }
+        .link a:hover{
+            color: gray;
+        }
+        #totop:hover{
+            background-color: gray;
+        }
+        #coffee{
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+            margin-left: 5px;
+        }   
     </style>
 </head>
 <body>
-      <nav>
+    <nav>
         <a href="">HOME</a>
         <a href=""><i class="fa fa-address-book" aria-hidden="true"></i>ABOUT</a>
         <a href=""><i class="fa fa-th" aria-hidden="true"></i>PORTFOLIO</a>
         <a href=""><i class="fa fa-envelope" aria-hidden="true"></i>CONTACT</a>
         <a href="" id="search"><i class="fa fa-search" aria-hidden="true"></i></a>
-      </nav> 
-      <div class="img">
+    </nav> 
+    <div class="img">
         <div class="logo">
             <h1>MY WEBSITE LOGO</h1>
         </div>
-      </div>
-      <div class="about">
+    </div>
+    <div class="about">
         <h1>ABOUT ME</h1>
         <h4>I love photography</h4>
         <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <div class="about-item">
             <div class="about-item1">
-                <h3>My Name</h3>
+                <h3><i class="fa fa-user" aria-hidden="true"></i>My Name</h3>
                 <img src="avatar_hat.jpg" alt="">
             </div>
             <div class="about-item2">
                 <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
         </div>
-      </div>
+        <div class="skill" id="skill">
+            <h1>Im really good at:</h1>
+            <div>
+                <p><i class="fa fa-camera" aria-hidden="true"></i>Photography</p>
+                <button class="photography-left">90%</button>
+                <button class="photography-right"></button>
+            </div>
+            <div>
+                <p><i class="fa fa-laptop" aria-hidden="true"></i>Web Design</p>
+                <button class="design-left">85%</button>
+                <button class="design-right"></button>
+            </div>
+            <div>
+                <p><i class="fa fa-photo" aria-hidden="true"></i>Photoshop</p>
+                <button class="photoshop-left">75%</button>
+                <button class="photoshop-right"></button>
+            </div>
+        </div>
+    </div>
+    <div class="index">
+        <div class="index-item">
+            <div class="index-item-text">
+                <h2>11+</h2>
+                <p>Partners</p>
+            </div>
+        </div>
+        <div class="index-item">
+            <div class="index-item-text">
+                <h2>55+</h2>
+                <p>Projects Done</p>
+            </div>
+        </div>
+        <div class="index-item">
+            <div class="index-item-text">
+                <h2>89+</h2>
+                <p>Happy Clients</p>
+            </div>
+        </div>
+        <div class="index-item">
+            <div class="index-item-text">
+                <h2>150+</h2>
+                <p>Meetings</p>
+            </div>
+        </div>
+    </div>
+    <div class="img1">
+        <div class="logo1">
+            <h1>PORTFOLIO</h1>
+        </div>
+    </div>
+    <div class="work">
+        <h2>MY WORK</h2>
+        <p>Here are some of my latest lorem work ipsum tipsum.</p>
+        <p>Click on the images to make them bigger</p>
+        <div class="work-item">
+            <img src="p1.jpg" alt="">
+            <img src="p2.jpg" alt="">
+            <img src="p3.jpg" alt="">
+            <img src="p4.jpg" alt="">
+            <img src="p5.jpg" alt="">
+            <img src="p6.jpg" alt="">
+            <img src="p7.jpg" alt="">
+            <img src="p8.jpg" alt="">
+        </div>
+        <a href="">LOAD MORE</a>
+    </div>
+    <div class="img2">
+        <div class="logo2">
+            <h1>CONTACT</h1>
+        </div>
+    </div>
+    <div class="contact">
+        <h1>WHERE I WORK</h1>
+        <p>I'd love your feedback!</p>
+        <div class="contact-item">
+            <div class="contact-item-left">
+                <div class="contact-item-img">
+                    <img src="map.jpg" alt="">
+                </div>
+            </div>
+            <div class="contact-item-right">
+                <p href=""><i class="fa fa-map-marker"></i>Chicago, US</p>
+                <p href=""><i class="fa fa-phone"></i> Phone: +00 151515</p>
+                <p href=""><i class="fa fa-envelope"></i>Email: mail@mail.com</p>
+                <p>Swing by for a cup of<i id="coffee" class="fa fa-coffee" aria-hidden="true"></i>, or leave me a note:</p>
+                <input type="text" class="name" placeholder="Name">
+                <input type="text" class="e-mail" placeholder="E-mail">
+                <input type="text" class="message" placeholder="Message">
+                <a href=""><i id="plane" class="fa fa-paper-plane" aria-hidden="true"></i>SEND MESSAGE</a>
+            </div>
+        </div>
+       
+    </div>
+    <footer>
+        <a href="" id="totop"><i class="fa fa-arrow-up" aria-hidden="true"></i>To the top</a>
+        <div class="link">
+            <a href=""><i class="fa fa-facebook-official"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-snapchat"></i></a>
+            <a href=""><i class="fa fa-pinterest"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+        </div>
+    </footer>
 </body>
 </html>
