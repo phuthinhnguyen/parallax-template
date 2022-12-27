@@ -18,18 +18,21 @@
             position: absolute;
             top: 0;
             left: 0;
-           height: 100px;
-           width: 100%;
-           z-index: 2;
-           opacity: 0.6;
+            height: 40px;
+            width: 100%;
+            z-index: 2;
+            opacity: 0.6;
+            overflow: hidden;
+            box-shadow: 1px 1px 3px 2px lightgray;
+            animation: animation 2s;
         }
         nav a{
             display: inline-block;
-            padding: 10px;
+            padding: 10px 15px;
             text-decoration: none;
             color: black;
             background-color: transparent;
-            margin-left: 10px;
+           
         }
         nav a:hover{
             color: black;
@@ -96,6 +99,10 @@
         .about-item{
             display: flex;
             column-gap: 20px;
+        }
+        .about-item img{
+            width: 100%;
+            height: auto;
         }
         .about-item1{
             flex: 1;
@@ -380,22 +387,129 @@
             padding: 0;
             margin-left: 5px;
         }   
+        .mobile{
+             position: fixed; 
+             top: 0; 
+             width: 100%;
+             display: none;
+             z-index: 1;
+             box-shadow: 1px 1px 3px 2px lightgray;
+        }
+        .mobile a{
+            display: inline-block;
+            text-decoration: none;
+            color: gray;
+            padding: 10px;
+        }
+        #bar{
+            float: right;
+            color: gray;
+        }
+        #bar i{
+            font-size: 20px;
+        }
+        .mobile a:hover{
+            background-color: gray;
+            color: black;
+        }
+        #bar:hover{
+            background-color: gray;
+            color: black;
+        }
+        .dropdown{
+            display: none;
+            position: fixed;
+            top: 40px;
+            z-index: 1;
+            width: 100%;
+        }
+        .dropdown a{
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            color: black;
+            background-color: white;
+        }
+        .dropdown a:hover{
+            background-color: lightgray;
+        }
+        @keyframe animation{
+            0%{top:0;opacity: 0.4;}
+            100%{top:10;opacity: 1;}
+        }
+        @media only screen and (max-width:1000px){
+            .about-item{
+                flex-direction: column;
+            }
+        }
+        @media only screen and (max-width:600px){
+            .about-item{
+                flex-direction: column;
+            }
+            .index{
+                grid-template-columns: auto auto;
+            }
+            .work-item{
+                grid-template-columns: auto;
+                row-gap: 15px;
+            }
+            .contact-item{
+                flex-direction: column;
+            }
+            .mobile{
+                display: block;
+            }
+            nav{
+                display: none;
+            }
+            #website{
+                display: none;
+            }
+        }
+
     </style>
 </head>
 <body>
-    <nav>
+    <div class="mobile" id="mobile">
+        <a id="home" href="">HOME</a>
+        <a id="bar" href="javascript:showdropdown();"><i class="fa fa-bars" aria-hidden="true"></i></a>
+    </div>
+   
+    <div class="dropdown" id="dropdown1">
+        <a href="#about">ABOUT</a>
+        <a href="#work">PORTFOLIO</a>
+        <a href="#contact">CONTACT</a>
+        <a href="">SEARCH</a>
+    </div>
+    <script>
+        let index=0;
+        function showdropdown(){          
+            console.log(index);
+            if (index%2==0){
+                let a=document.getElementById("dropdown1");
+                a.style.display="block";
+                index++;   
+            }
+            else if (index%2!=0){
+                let a=document.getElementById("dropdown1");
+                a.style.display="none";
+                index++;
+            }
+        }
+    </script>
+    <nav id="nav">
         <a href="">HOME</a>
-        <a href=""><i class="fa fa-address-book" aria-hidden="true"></i>ABOUT</a>
-        <a href=""><i class="fa fa-th" aria-hidden="true"></i>PORTFOLIO</a>
-        <a href=""><i class="fa fa-envelope" aria-hidden="true"></i>CONTACT</a>
+        <a href="#about"><i class="fa fa-address-book" aria-hidden="true"></i>ABOUT</a>
+        <a href="#work"><i class="fa fa-th" aria-hidden="true"></i>PORTFOLIO</a>
+        <a href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i>CONTACT</a>
         <a href="" id="search"><i class="fa fa-search" aria-hidden="true"></i></a>
     </nav> 
-    <div class="img">
+    <div class="img"> 
         <div class="logo">
-            <h1>MY WEBSITE LOGO</h1>
+            <h1>MY <span id="website">WEBSITE</span> LOGO</h1>
         </div>
     </div>
-    <div class="about">
+    <div class="about" id="about">
         <h1>ABOUT ME</h1>
         <h4>I love photography</h4>
         <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -458,7 +572,7 @@
             <h1>PORTFOLIO</h1>
         </div>
     </div>
-    <div class="work">
+    <div class="work" id="work">
         <h2>MY WORK</h2>
         <p>Here are some of my latest lorem work ipsum tipsum.</p>
         <p>Click on the images to make them bigger</p>
@@ -479,7 +593,7 @@
             <h1>CONTACT</h1>
         </div>
     </div>
-    <div class="contact">
+    <div class="contact" id="contact">
         <h1>WHERE I WORK</h1>
         <p>I'd love your feedback!</p>
         <div class="contact-item">
@@ -512,5 +626,73 @@
             <a href=""><i class="fa fa-linkedin"></i></a>
         </div>
     </footer>
+    <div id="modal01" onclick="this.style.display='none'" style="display: none;">
+        <span title="Close Modal Image"><i class="fa fa-remove"></i></span>
+        <div class="">
+          <img id="img01" class="" src="https://www.w3schools.com/w3images/p2.jpg">
+          <p id="caption" class="">Coffee beans</p>
+        </div>
+    </div>
+    
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
+        }
+        
+        // Change style of navbar on scroll
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var navbar = document.getElementById("nav");
+            var mobile = document.getElementById("mobile");
+            var bar = document.getElementById("bar");
+            var home = document.getElementById("home");
+          
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.style.position="sticky";
+                navbar.style.top="0";
+                navbar.style.backgroundColor="white";
+                navbar.style.color="black";
+                nav.style.opacity="1";
+                nav.style.animation = "animation 4s";
+                nav.style.boxshadow="10px 20px 30px 10px lightgray";
+
+                mobile.style.position="sticky";
+                mobile.style.top="0";
+                mobile.style.backgroundColor="white";
+                bar.style.color="black";
+                home.style.color="black";
+                mobile.style.opacity="1";
+              
+            } 
+            else {
+                navbar.style.position="absolute";
+                navbar.style.top="0";
+                navbar.style.backgroundColor="transparent";
+                navbar.style.color="gray";
+                nav.style.opacity="0.6";
+                 
+                mobile.style.position="absolute";
+                mobile.style.top="0";
+                mobile.style.backgroundColor="transparent";
+                mobile.style.color="gray";
+                mobile.style.opacity="0.6";
+               
+            }
+        }
+        
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+        </script>
 </body>
 </html>
